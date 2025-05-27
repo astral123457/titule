@@ -1,0 +1,10 @@
+titulo_padrao: "[Jogador]"
+cor_titulo: "&b"
+mensagem_entrada: "&aBem-vindo ao servidor!"
+
+mensagem_saida: "&cObrigado por jogar!"
+mensagem_morte: "&cVocê morreu! Tente novamente."
+mensagem_vitoria: "&aParabéns! Você venceu!"
+mensagem_erro: "&cOcorreu um erro. Tente novamente mais tarde."
+mensagem_comando_desconhecido: "&cComando desconhecido. Use /help para ver a lista de comandos."
+mensagem_comando_invalido: "&cComando inválido. Verifique a sintaxe e tente novamente."

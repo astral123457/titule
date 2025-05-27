@@ -1,0 +1,12 @@
+﻿name: teste21
+version: v2.7.2
+main: com.teste21.Main
+api-version: 1.21.4
+author: Amauri Bueno dos Santos
+description: Este é um plugin personalizado para Minecraft.
+folia-supported: true
+commands:
+  titulo:
+    description: Define um título personalizado para o jogador.
+    usage: /titulo <seu título>
+    permission: teste21.titulo
