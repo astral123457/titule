@@ -38,7 +38,7 @@ tasks.withType(JavaCompile).configureEach {
 
 tasks.named('jar').configure {
     archiveBaseName.set('teste21')
-    archiveVersion.set('v2.7.2')
+    archiveVersion.set('v2.7.6')
     archiveClassifier.set('')
     destinationDirectory.set(layout.buildDirectory.dir("libs")) // Corrigido para compatibilidade no Windows
 }
