@@ -109,4 +109,7 @@ eu revivi o metodo deste neste video
 
       https://www.youtube.com/watch?v=ecdRaJMA130
 
+   ![image](https://github.com/user-attachments/assets/cb6cd373-957f-44e3-ac79-e82575f171e9)
+
+
 
