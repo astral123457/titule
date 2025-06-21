@@ -103,4 +103,8 @@ suporte de um assistente de IA. Copilot
        ⚙ Executado automaticamente no `onEnable()`:  
        → `AgendadorTNT` agenda TNTs de fábricas ativas
 
+eu revivi o metodo deste neste video
+
+      https://www.youtube.com/watch?v=ecdRaJMA130
+
 
