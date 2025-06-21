@@ -37,7 +37,7 @@ suporte de um assistente de IA. Copilot
 
 | /tnt <nome> | Registra a fábrica na posição da TNT e calcula o OBSERVER automático | 
 
-| /verificatnt <nome> | Executa a fábrica: move o observer, recoloca a TNT | 
+| /verificatnt <nome> |  TNT Cuidado este comando e invertido Nao use so se quiser fazer tudo de novo| 
 
 | /resetarfabricas | Apaga todos os registros no banco (DELETE + VACUUM) | 
 
@@ -68,13 +68,13 @@ suporte de um assistente de IA. Copilot
 
         +---------------------------+        +---------------------------+
         | /verificatnt <nome>       |        | /resetarfabricas          |
-        | ⤷ Executa a fábrica       |        | ⤷ Limpa TODAS as fábricas |
+        | ⤷ destroi a fábrica       |        | ⤷ Limpa TODAS as fábricas |
         +---------------------------+        +---------------------------+
                    |                                   |
                    v                                   v
      Lê info do banco e coloca:             Deleta registros e faz limpeza
-     - OBSERVER na posição destino
-     - TNT no local original
+     - Cuidado na posição 
+     - TNT explode
 
 
                         ↓
