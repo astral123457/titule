@@ -111,5 +111,11 @@ eu revivi o metodo deste neste video
 
    ![image](https://github.com/user-attachments/assets/cb6cd373-957f-44e3-ac79-e82575f171e9)
 
+# No meu caso eu chamei a fabrica de f1
 
+/tnt f1
+
+/ativarfabrica f1
+
+/desativarfabrica f1
 
