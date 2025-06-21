@@ -105,6 +105,8 @@ suporte de um assistente de IA. Copilot
 
 eu revivi o metodo deste neste video
 
+![image](https://github.com/user-attachments/assets/252b1e72-fbe3-4f47-8e9f-c5cf0bfc3341)
+
       https://www.youtube.com/watch?v=ecdRaJMA130
 
 
