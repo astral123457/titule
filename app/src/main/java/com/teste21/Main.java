@@ -39,6 +39,8 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.command.ConsoleCommandSender;
+import io.papermc.paper.threadedregions.scheduler.ScheduledTask;
+import java.util.function.Consumer;
 
 
 import org.bukkit.Bukkit;
@@ -70,33 +72,48 @@ import java.util.UUID;
 
 public class Main extends JavaPlugin implements Listener {
     private Connection connection;
+    private AgendadorTNT agendadorTNT;
+
+
 
 
 @Override
 public void onEnable() {
     getLogger().info("✅ Plugin iniciado com configurações!");
 
-    // Eventos principais
+    // Eventos
     getServer().getPluginManager().registerEvents(this, this);
     Bukkit.getPluginManager().registerEvents(new PlayerJoinListener(this), this);
 
-    // Banco de dados e carregamento
-    connectDatabase();           // 1º conecta
-    carregarFabricas();          // 2º carrega dados se necessário
-    createConfig();              // 3º configurações padrão
+    // Banco e configs
+    connectDatabase();
+    carregarFabricas();
+    createConfig();
 
-    // Registro de comandos
+    // Comandos
     getCommand("titulo").setExecutor(new TitleCommand(this));
-    getCommand("verificatnt").setExecutor(new VerificaTNTCommand(this));
+    getCommand("verificatnt").setExecutor(new ExecutarFabricaCommand(this));
     getCommand("tnt").setExecutor(new VerificaTNTCommand(this));
     getCommand("resetarfabricas").setExecutor(new ResetarFabricasCommand(this));
     getCommand("listfabric").setExecutor(new ListarFabricasCommand(this));
     getCommand("ativarfabrica").setExecutor(new AtivarFabricaCommand(this));
     getCommand("desativarfabrica").setExecutor(new DesativarFabricaCommand(this));
 
-    // Agendamento automático com base nas fábricas ativas
-    new AgendadorTNT(this).agendarTodasFabricas();
+    // Inicializa e agenda as fábricas no Folia
+    this.agendadorTNT = new AgendadorTNT(this);
+    Bukkit.getGlobalRegionScheduler().runDelayed(this, task -> {
+        agendadorTNT.agendarTodasFabricas();
+        getLogger().info("🔁 Agendador de TNT iniciado com sucesso!");
+    }, 1L);
 }
+
+// Getter público para usar em comandos
+public AgendadorTNT getAgendadorTNT() {
+    return this.agendadorTNT;
+}
+
+
+
 
 @Override
 public void onDisable() {
