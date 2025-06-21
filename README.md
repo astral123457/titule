@@ -31,3 +31,76 @@ Se precisar de mais ajustes, me avise! 😃🔥
 suporte de um assistente de IA. Copilot
 
 ![A flowchart illustra](https://github.com/user-attachments/assets/406cb6d0-d64a-433a-be1d-3430bd1780c2)
+
+#  Explicação resumida por comando 
+| Comando | O que faz | 
+
+| /tnt <nome> | Registra a fábrica na posição da TNT e calcula o OBSERVER automático | 
+
+| /verificatnt <nome> | Executa a fábrica: move o observer, recoloca a TNT | 
+
+| /resetarfabricas | Apaga todos os registros no banco (DELETE + VACUUM) | 
+
+| /listfabric | Mostra todas as fábricas salvas com coordenadas e status de agendamento | 
+
+| /ativarfabrica <nome> | Marca a fábrica para que seja agendada automaticamente | 
+
+| /desativarfabrica <nome> | Impede que a fábrica seja agendada automaticamente | 
+
+| /titulo | (Comando decorativo) Dá um título aleatório ao jogador | 
+
+
+![fluxograma dos coman](https://github.com/user-attachments/assets/607277e6-fd03-471d-bb7b-230a7d7ac77a)
+
+
+             +----------------------+
+             |  /tnt <nome>         |
+             |  ⤷ Registra fábrica  |
+             +----------------------+
+                        |
+                        v
+           +------------------------------+
+           |  Salva nome, mundo, coords  |
+           |  da TNT e Observer no banco |
+           +------------------------------+
+
+                        ↓
+
+        +---------------------------+        +---------------------------+
+        | /verificatnt <nome>       |        | /resetarfabricas          |
+        | ⤷ Executa a fábrica       |        | ⤷ Limpa TODAS as fábricas |
+        +---------------------------+        +---------------------------+
+                   |                                   |
+                   v                                   v
+     Lê info do banco e coloca:             Deleta registros e faz limpeza
+     - OBSERVER na posição destino
+     - TNT no local original
+
+
+                        ↓
+          +------------------------------+
+          |  /listfabric                 |
+          |  ⤷ Lista todas as fábricas  |
+          +------------------------------+
+                  Exibe:
+                  - Nome
+                  - Mundo
+                  - TNT (X, Y, Z)
+                  - Status: ✅ Ativa | ⛔ Inativa
+
+
+                        ↓
+         +------------------------------+
+         |  /ativarfabrica <nome>       |
+         |  ⤷ Habilita agendamento      |
+         +------------------------------+
+
+         +------------------------------+
+         |  /desativarfabrica <nome>    |
+         |  ⤷ Desativa agendamento      |
+         +------------------------------+
+
+       ⚙ Executado automaticamente no `onEnable()`:  
+       → `AgendadorTNT` agenda TNTs de fábricas ativas
+
+
