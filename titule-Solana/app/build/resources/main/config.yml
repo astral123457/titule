@@ -1,0 +1,39 @@
+titulo_padrao: "[Jogador]"
+cor_titulo: "&b"
+mensagem_entrada: "&aBem-vindo ao servidor!"
+
+mensagem_saida: "&cObrigado por jogar!"
+mensagem_morte: "&cVocê morreu! Tente novamente."
+mensagem_vitoria: "&aParabéns! Você venceu!"
+mensagem_erro: "&cOcorreu um erro. Tente novamente mais tarde."
+mensagem_comando_desconhecido: "&cComando desconhecido. Use /help para ver a lista de comandos."
+mensagem_comando_invalido: "&cComando inválido. Verifique a sintaxe e tente novamente."
+
+database:
+  url: jdbc:mysql://debian.tail561849.ts.net:3306/banco
+  user: root
+  password: "0073007"
+  database_solana_minecraft: "banco"
+  autoReconnect: true
+  SSL: false
+  verifyServerCertificate: true
+  sslCert: "/etc/mysql/ssl/client-cert.pem"
+  sslKey: "/etc/mysql/ssl/client-key.pem"
+  sslCa: "/etc/mysql/ssl/ca.pem"
+
+
+docker:
+  host: debian.tail561849.ts.net
+  base_path: /home/astral/astralcoin
+  solana_command: heysolana
+  wallet_bank_store_admin: "dadhcDXHiHDrWkT2Z4pSZyF6HWmHwQMG3HtGciwccVP"
+  api_web_key: "b493d48364afe44d"
+
+store:
+  value_of_in_game_currency: 1000 # 1 SOL = 1000 moedas do jogo
+language:
+  default: "pt-BR"
+  supported:
+    - "pt-BR"
+    - "en-US"
+    - "es-ES"

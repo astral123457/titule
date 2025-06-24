@@ -1,0 +1,36 @@
+﻿name: teste21
+version: v2.7.8
+main: com.teste21.Main
+api-version: 1.21.4
+author: Amauri Bueno dos Santos
+description: Este é um plugin personalizado para Minecraft.
+folia-supported: true
+commands:
+  titulo:
+    description: Recebe um título aleatório
+    usage: /titulo
+  verificatnt:
+    description: Executa a fábrica registrada
+    usage: /verificatnt <nomeDaFabrica>
+  tnt:
+    description: Registra dinamicamente a posição da fábrica
+    usage: /tnt <nomeDaFabrica>
+  resetarfabricas:
+    description: Apaga todas as fábricas do banco de dados
+    usage: /resetarfabricas
+  listfabric:
+    description: Lista todas as fábricas salvas
+    usage: /listfabric
+  ativarfabrica:
+    description: Ativa o agendamento automático da fábrica
+    usage: /ativarfabrica <nome>
+
+  desativarfabrica:
+    description: Desativa o agendamento automático da fábrica
+    usage: /desativarfabrica <nome>
+
+
+
+
+
+
