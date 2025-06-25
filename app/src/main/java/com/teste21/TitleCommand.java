@@ -62,35 +62,26 @@ public class TitleCommand implements CommandExecutor {
 
             // Aplicar efeitos ou conceder itens especiais com base no título
             switch (title) {
-                case "Guerreiro Lendário":
-                    //player.getInventory().addItem(new ItemStack(Material.DIAMOND_SWORD));
-                    //player.sendMessage(ChatColor.GOLD + "Você recebeu uma espada lendária!");
+                case "Guerreiro Lendário":// Escanor Orgulho do Leão
+                // Um dos mais poderosos, confiando totalmente na própria força.
                     break;
-                case "Mestre da Magia":
-                    //player.getInventory().addItem(new ItemStack(Material.MAGMA_CREAM, 3));
-                    //player.getInventory().addItem(new ItemStack(Material.BLAZE_POWDER, 3));
-                    //player.sendMessage(ChatColor.GOLD + "Você recebeu 3 Creme de Magma e 3 Pó de Blaze!");
+                case "Mestre da Magia":// Merlin Gula do Javali
+                // Um dos magos mais poderosos, obcecado por conhecimento e poder.
                     break;
-                case "Explorador Sombrio":
-                    //player.addPotionEffect(new PotionEffect(PotionEffectType.INVISIBILITY, 600, 1));
-                    //player.sendMessage(ChatColor.DARK_PURPLE + "Você recebeu invisibilidade por 30 segundos!");
+                case "Explorador Sombrio":// Meliodas Ira do Dragão
+                // O líder dos Sete Pecados Capitais, com uma força imensa e um
                     break;
-                case "Titã do PvP":
-                    //player.getInventory().addItem(new ItemStack(Material.DIAMOND_CHESTPLATE));
-                    //player.sendMessage(ChatColor.RED + "Você recebeu uma armadura poderosa!");
+                case "Titã do PvP":// Ban Avareza da Cabra
+                // Um dos mais poderosos, obcecado por sua própria força e habilidades.
                     break;
-                case "Caçador de Tesouros":
-                    //player.getInventory().addItem(new ItemStack(Material.GOLDEN_APPLE, 2));
-                    //player.sendMessage(ChatColor.YELLOW + "Você recebeu 2 Maçãs Douradas místicas!");
+                case "Caçador de Tesouros":// King Preguiça do Urso
+                // O rei dos Fairy Kings, com um poder imenso e habilidades de controle da natureza.
                     break;
-                case "Rei da Sobrevivência":
-                    //player.getInventory().addItem(new ItemStack(Material.COOKED_BEEF, 10));
-                    //player.addPotionEffect(new PotionEffect(PotionEffectType.REGENERATION, 200, 1));
-                    //player.sendMessage(ChatColor.GREEN + "Você recebeu comida especial e regeneração temporária!");
+                case "Rei da Sobrevivência":// Diane Inveja da Terra
+                // A gigante mais poderosa, com habilidades de controle da terra e força imensa.
                     break;
-                case "Arquimago Misterioso":
-                    //player.getInventory().addItem(new ItemStack(Material.ENCHANTED_BOOK));
-                    //player.sendMessage(ChatColor.BLUE + "Você recebeu um livro de encantamentos poderosos!");
+                case "Arquimago Misterioso":// Gowther Luxúria do Carneiro
+                // Um dos magos mais poderosos, com habilidades de manipulação mental e mágica.
                     break;
             }
         }, () -> player.sendMessage(ChatColor.RED + "Erro ao definir título!"), 0);
